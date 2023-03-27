@@ -1,0 +1,7 @@
+@import './main.scss';
+
+.page{
+    width: 100%;
+    height: calc( 100% - 35px - 2rem );
+    min-height: calc( 100vh - 35px - 2rem );
+}

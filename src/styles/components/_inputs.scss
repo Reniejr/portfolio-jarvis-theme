@@ -1,0 +1,48 @@
+.input-container{
+    position: relative;
+
+    .label{
+        position: absolute;
+        @include transition(all .2s ease);
+
+        &.label-on-focus{
+            top: -7px;
+            left: .5rem;
+            font-size: 12px;
+            font-weight: bold;
+            backdrop-filter: brightness(75%);
+        }
+
+        &.label-off-focus{
+            top: 50%;
+            left: .75rem;
+            @include transform(translateY(-50%));
+        }
+    }
+
+    .input{
+        font-size: 18px;
+        font-weight: bold;
+        outline: none;
+        padding: 7.5px 10px;
+        @include borderRadius(3px);
+
+    }
+
+    ion-icon[name="eye-outline"], ion-icon[name="eye-off-outline"]{
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        right: 1rem;
+        z-index: 10;
+    }
+
+    .err-input-validation{
+        font-size: 10px;
+        font-weight: bold;
+        color: $primary;
+        margin-top: .25rem;
+        margin-left: .5rem;
+    }
+}
